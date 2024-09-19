@@ -32,6 +32,7 @@ const Form = ({ onSubmit }) => {
             </li>
           </ul>
           <form className="form" onSubmit={handleSubmit}>
+            <label>Email address</label>
             <input
               type="email"
               placeholder="email@company.com"
