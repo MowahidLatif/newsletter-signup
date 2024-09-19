@@ -1,38 +1,154 @@
-.App {
+/* Colors */
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  background-color: var(--dark-slate-grey);
+  color: var(--charcoal-grey);
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--dark-slate-grey);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 375px;
+  width: 100%;
+  margin: 1rem;
+}
+
+.form-section {
+  flex: 1;
+  padding-right: 0rem;
+}
+
+.form-section h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-section p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--grey);
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-section ul {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-section ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.form-section ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--tomato);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.form {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form input[type="email"] {
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form button {
+  width: 90%;
+  padding: 0.75rem;
+  background-color: var(--charcoal-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: var(--tomato);
+}
+
+.image-section {
+  flex: 1;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 1000px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .image-section img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .form-section {
+    padding-right: 2rem;
+  }
+
+  .form-section h1 {
+    text-align: left;
+  }
+
+  .form-section p {
+    text-align: left;
+  }
+
+  .form {
+    align-items: flex-start;
+  }
+
+  .form input[type="email"],
+  .form button {
+    width: 100%;
   }
 }

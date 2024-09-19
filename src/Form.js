@@ -18,17 +18,26 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <button type="submit">Subscribe</button>
-      {message && <p>{message}</p>}
-    </form>
+    <div class="container">
+      <div class="card">
+        <div class="form-section">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          <form class="form">
+            <input type="email" placeholder="email@company.com" required />
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div class="image-section">
+          <img src="path-to-image" alt="Illustration" />
+        </div>
+      </div>
+    </div>
   );
 };
 
