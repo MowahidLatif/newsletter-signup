@@ -1,4 +1,8 @@
+const express = require("express");
+const app = express();
 const Subscriber = require("./models/Subscriber");
+
+app.use(express.json());
 
 app.post("/subscribe", async (req, res) => {
   const { email } = req.body;
@@ -15,3 +19,5 @@ app.post("/subscribe", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
+
+module.exports = app;

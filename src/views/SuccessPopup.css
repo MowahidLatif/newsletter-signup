@@ -1,0 +1,80 @@
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.success-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 90%;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 1rem;
+  color: hsl(4, 100%, 67%);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: hsl(234, 29%, 20%);
+}
+
+p {
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  color: hsl(231, 7%, 60%);
+}
+
+.dismiss-button {
+  background: linear-gradient(
+    to right,
+    hsl(4, 100%, 67%),
+    hsl(235, 18%, 26%)
+  ); /* Gradient */
+  border: none;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.dismiss-button:hover {
+  background: hsl(4, 100%, 60%);
+}
+
+@media (max-width: 600px) {
+  .success-card {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  .dismiss-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
