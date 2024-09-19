@@ -44,7 +44,7 @@ p {
     to right,
     hsl(4, 100%, 67%),
     hsl(235, 18%, 26%)
-  ); /* Gradient */
+  );
   border: none;
   color: white;
   padding: 0.75rem;

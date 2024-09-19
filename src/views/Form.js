@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import illustrationDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 import illustrationMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import iconList from "../assets/images/icon-list.svg";
+import "./Form.css";
 
 const Form = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
