@@ -10,7 +10,7 @@
 html,
 body {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   box-sizing: border-box;
   font-family: var(--font-family);
   background-color: var(--dark-slate-grey);
@@ -20,6 +20,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -34,18 +35,24 @@ body {
 
 .image-section {
   display: flex;
-  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 1rem; */
   border-radius: 0px 0px 20px 20px;
   overflow: hidden;
 }
 
 .image-section img {
-  width: 100%;
+  width: 100vw;
+  /* height: auto; */
+  object-fit: cover;
 }
 
 .form-section {
   flex: 1;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
 }
 
 .form-section h1 {
@@ -58,21 +65,19 @@ body {
 .form-section p {
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
-  /* color: var(--grey); */
   color: var(--charcoal-grey);
   text-align: start;
 }
 
 .form-section label {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: var(--charcoal-grey);
-    text-align: center;
-  }
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--charcoal-grey);
+  text-align: center;
+}
 
 .form-section ul {
   font-size: 1.15rem;
-
   list-style: none;
   padding: 0;
 }
@@ -88,12 +93,12 @@ body {
 }
 
 .form {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 100%;
-  }
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
 
 .form input[type="email"] {
   width: 100%;
@@ -114,7 +119,6 @@ body {
   border-radius: 5px;
   font-size: 1.1rem;
   box-sizing: border-box;
-
   cursor: pointer;
 }
 
@@ -136,14 +140,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* padding: 2rem; */
   }
 
   .image-section {
+    display: flex;
     order: 2;
-    margin-bottom: 0;
-    padding-left: 2rem;
-    border-radius: 12px;
+    margin-bottom: 1rem;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+  }
+
+  .image-section img {
+    width: 100%;
   }
 
   .form-section {
