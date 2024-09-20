@@ -6,10 +6,21 @@ import "./Form.css";
 
 const Form = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(email);
+    if (!emailIsValid(email)) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
+      onSubmit(email);
+    }
+  };
+
+  const emailIsValid = (email) => {
+    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return isValid;
   };
 
   return (
@@ -37,14 +48,19 @@ const Form = ({ onSubmit }) => {
               <img src={iconList} alt="Check icon" /> And much more!
             </li>
           </ul>
-          <form className="form" onSubmit={handleSubmit}>
-            <label>Email address</label>
+          <form className="form" onSubmit={handleSubmit} noValidate>
+            <div className="label-container">
+              <label>Email address</label>
+              <label className={`error-label ${emailError ? "visible" : ""}`}>
+                Valid email required
+              </label>
+            </div>
             <input
               type="email"
               placeholder="email@company.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
+              className={emailError ? "input-error" : ""}
             />
             <button type="submit">Subscribe to monthly newsletter</button>
           </form>

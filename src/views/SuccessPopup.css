@@ -62,7 +62,7 @@ p {
 }
 
 .dismiss-button:hover {
-  background: var(--tomato);
+  background: linear-gradient(to right, hsl(0, 85%, 66%), hsl(32, 70%, 48%));
 }
 
 /* Mobile view adjustments */

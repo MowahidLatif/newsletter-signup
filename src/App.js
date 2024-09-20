@@ -4,13 +4,12 @@ import SuccessPopup from "./views/SuccessPopUp";
 import "./App.css";
 
 export default function App() {
-  const [email, setEmail] = useState(""); // State to store email
+  const [email, setEmail] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
 
-  // Update the email state when the form is submitted
   const handleSubmit = async (submittedEmail) => {
-    setEmail(submittedEmail); // Set the email received from the form
-    setShowSuccess(true); // Show the success popup
+    setEmail(submittedEmail);
+    setShowSuccess(true);
   };
 
   const handleClose = () => {
