@@ -36,7 +36,6 @@ body {
 
 .icon img {
   width: 75px;
-  margin-bottom: 1rem;
 }
 
 h2 {
@@ -109,8 +108,12 @@ p {
     border-radius: 30px;
   }
 
+  .icon img {
+    width: 50px;
+  }
+
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   p {
