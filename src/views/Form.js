@@ -15,6 +15,12 @@ const Form = ({ onSubmit }) => {
   return (
     <div className="container">
       <div className="card">
+        <div className="image-section">
+          <picture>
+            <source srcSet={illustrationDesktop} media="(min-width: 768px)" />
+            <img src={illustrationMobile} alt="Illustration" />
+          </picture>
+        </div>
         <div className="form-section">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -42,12 +48,6 @@ const Form = ({ onSubmit }) => {
             />
             <button type="submit">Subscribe to monthly newsletter</button>
           </form>
-        </div>
-        <div className="image-section">
-          <picture>
-            <source srcSet={illustrationDesktop} media="(min-width: 768px)" />
-            <img src={illustrationMobile} alt="Illustration" />
-          </picture>
         </div>
       </div>
     </div>
