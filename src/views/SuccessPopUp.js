@@ -8,12 +8,13 @@ const SuccessPopup = ({ email, handleClose }) => {
       <div className="success-card">
         <div className="icon">
           <img src={iconSuccess} alt="Success checkmark" />
+          <h2>Thanks for subscribing!</h2>
+          <p>
+            A confirmation email has been sent to <strong>{email}</strong>.
+            Please open it and click the button inside to confirm your
+            subscription.
+          </p>
         </div>
-        <h2>Thanks for subscribing!</h2>
-        <p>
-          A confirmation email has been sent to <strong>{email}</strong>. Please
-          open it and click the button inside to confirm your subscription.
-        </p>
         <button className="dismiss-button" onClick={handleClose}>
           Dismiss message
         </button>

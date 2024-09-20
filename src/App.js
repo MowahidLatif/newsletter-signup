@@ -1,26 +1,16 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Form from "./views/Form";
 import SuccessPopup from "./views/SuccessPopUp";
 import "./App.css";
 
 export default function App() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(""); // State to store email
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = async (email) => {
-    try {
-      const response = await axios.post("/subscribe", { email });
-      if (response.status === 200) {
-        setEmail(email);
-        setShowSuccess(true);
-      }
-    } catch (error) {
-      console.error(
-        "An error occurred:",
-        error.response?.data?.message || error.message
-      );
-    }
+  // Update the email state when the form is submitted
+  const handleSubmit = async (submittedEmail) => {
+    setEmail(submittedEmail); // Set the email received from the form
+    setShowSuccess(true); // Show the success popup
   };
 
   const handleClose = () => {
